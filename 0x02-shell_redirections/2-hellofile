@@ -1,1 +1,2 @@
-#!/bin/bash\necho sudo less /etc/passwd 
+#!/bin/bash
+echo sudo less /etc/passwd 
