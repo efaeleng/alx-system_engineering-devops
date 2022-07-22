@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Script that uses nested loop
+# display hours from 0 to 12
+# display minutes from 1 to 59
+
+hour=0
+while [ $hour -le 12 ]
+do
+    echo "Hr: $hour"
+    minutes=1
+    while [ $minutes -lt 60 ]
+    do
+	echo "$minutes"
+	((minutes++))
+    done
+    ((hour++))
+done
