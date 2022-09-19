@@ -1,0 +1,6 @@
+# ssh config file
+Host *
+      SendEnv LANG LC_*
+      HashKnownHosts yes
+      PasswordAuthentication no
+      IdentifyFile ~/.ssh/school 
