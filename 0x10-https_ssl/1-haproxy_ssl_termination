@@ -43,12 +43,12 @@ frontend http
         default_backend web-backend
 
 frontend www-https
-        bind *:443 ssl crt /etc/haproxy/ssl/www.adamkeino.tech.pem
+        bind *:443 ssl crt /etc/haproxy/ssl/www.efaeleng.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend web-backend
 
 backend web-backend
         balance roundrobin
         redirect scheme https if !{ ssl_fc }
-        server 13101-web-01 34.231.21.62:80 check
-        server 13101-web-02 34.231.110.215:80 check
+        server 10651-web-01 18.208.159.63:80 check
+        server 10651-web-02 18.232.56.171:80 check
