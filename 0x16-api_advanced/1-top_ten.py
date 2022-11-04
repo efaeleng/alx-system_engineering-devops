@@ -8,7 +8,7 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
         "User-Agent": "0x16-api_advanced:project:\
-v1.0.0 (by /u/eleng)"
+v1.0.0 (by /u/efaeleng)"
     }
     params = {
         "limit": 10
@@ -19,3 +19,4 @@ v1.0.0 (by /u/eleng)"
         print("None")
         return
     results = response.json().get("data")
+    [print(c.get("data").get("title")) for c in results.get("children")]
